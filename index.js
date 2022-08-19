@@ -17,7 +17,7 @@ app.get('/twitter-tab',(req,res)=>{
   res.sendFile(path.join(__dirname + '/twitter-tab.html'));
 })
 app.listen(process.env.PORT ||8080, () => {
-  console.log("chala");
+  console.log(`${process.env.PORT} `);
 })
 
 
