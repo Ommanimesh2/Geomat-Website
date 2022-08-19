@@ -27,9 +27,5 @@
     "node-fetch": "^2.6.1",
     "winston": "^3.3.3",
     "yup": "^0.32.9"
-  },
-  "devDependencies": {
-    "beefy": "^2.1.8",
-    "browserify": "^17.0.0"
   }
 }
