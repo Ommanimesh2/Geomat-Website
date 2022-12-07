@@ -44,34 +44,33 @@ var floodname2 = [];
 var selectcountry;
 var detaildata;
 console.log("chala");
-// $(document).ready(async function () {
-//   const data=await fetch('http://localhost:7000/api/floods/flooddata')
-// console.log(data);
-// document.getElementById("loading").remove()
-// document.getElementById("pano").remove()
-//   $.ajax({
+$(document).ready(async function () {
+
+document.getElementById("loading").remove()
+document.getElementById("pano").remove()
+  $.ajax({
     
-//     url: 'https://guarded-meadow-18404.herokuapp.com/api/floods/flooddata',
-//     type: 'GET',
+    url: 'https://apifloodinazure.azurewebsites.net/api/floods/flooddata',
+    type: 'GET',
    
 
-//     success: async function (allflood) {
+    success: async function (allflood) {
 
-//       actualdata = await allflood;
-//       console.log(actualdata[0]);
+      actualdata = await allflood;
+      console.log(actualdata[0]);
 
-//       $("#loading").hide();
-//       $("#pano").hide();
+      $("#loading").hide();
+      $("#pano").hide();
 
 
-//     }
-//     ,
-//     error: function (error) {
-//       console.log(error);
+    }
+    ,
+    error: function (error) {
+      console.log(error);
 
-//     }
-//   });
-// });
+    }
+  });
+});
 $("#loading").hide();
 $("#pano").hide();
 $("#sardata").hide();
@@ -80,7 +79,7 @@ $("#weblink").hide();
 $(document).ready(function () {
 
   $.ajax({
-    url: 'https://agile-hollows-34401.herokuapp.com/weblinks',
+    url: 'https://flooduploadersystem.azurewebsites.net/weblinks',
     type: 'GET',
 
     success: function (alllink) {
@@ -178,7 +177,7 @@ async function getVal() {
 
 $("#loading").show();
 $("#pano").show();
-  const result = await fetch(`https://guarded-meadow-18404.herokuapp.com/api/floods/testing8?${params}`, {
+  const result = await fetch(`https://apifloodinazure.azurewebsites.net/api/floods/testing8?${params}`, {
     method: "GET"
   })
 
@@ -214,7 +213,7 @@ $("#pano").show();
       }
     }
   }
-  //  ||((from >= check1  && from<= check2) && (to >= check1 && to <= check2)) )
+   //||((from >= check1  && from<= check2) && (to >= check1 && to <= check2)) )
 
   //flooddata-parsing
   for (var i = 0; i < allopticaldata.length; i++) {

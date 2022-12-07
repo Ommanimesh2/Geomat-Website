@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/59714252-9d2c-44c1-afe0-8abbda2e2497/resourceGroups/newFloodAppMade_rg/providers/Microsoft.Web/sites/newFloodAppMade",
+    "appService.deploySubpath": "."
+}
